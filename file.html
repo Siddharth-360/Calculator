@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 340px;
+            height: fit-content;
+            border: 2px solid black;
+
+            display: grid;
+            grid-template-rows: repeat(5, 1fr);
+            grid-template-columns: repeat(4, 1fr);
+
+            margin: 10px;
+            padding: 10px;
+            background-color: black;
+            border-radius: 15px;
+            font-family: "Lilita One";
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3),
+                0 6px 20px rgba(0, 0, 0, 0.19);
+            background: linear-gradient(145deg, #333, #000);
+
+        }
+
+        .display {
+            grid-column: 1 /  5;
+            border: 2px solid black;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 10px;
+            font-size: 40px;
+            height: 60px;
+            font-family: "Lilita One";
+            border-radius: 10px;
+        }
+
+        .button {
+            margin: 5px;
+            height: 60px;
+            width: 60px;
+            background-color: rgb(71, 71, 71);
+            color: rgb(134, 134, 7);
+            border-radius: 50%;
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: 400;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgb(127, 152, 2);
+        }
+
+        .button:hover {
+            color: rgb(255, 247, 0);
+
+        }
+        .button:active {
+  box-shadow: 0 0 2px rgb(127, 152, 2);
+  transform: translateY(7px);
+}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <input class="display" type="text">
+        <div class="button buttonBackspace buttonEscape">AC</div>
+        <div class="button button7">7</div>
+        <div class="button button8">8</div>
+        <div class="button button9">9</div>
+        <div class="button button+">+</div>
+        <div class="button button4">4</div>
+        <div class="button button5">5</div>
+        <div class="button button6">6</div>
+        <div class="button button-">-</div>
+        <div class="button button1">1</div>
+        <div class="button button2">2</div>
+        <div class="button button3">3</div>
+        <div class="button button*">*</div>
+        <div class="button button0">0</div>
+        <div class="button button.">.</div>
+        <div class="button button= buttonEnter">=</div>
+        <div class="button button/">/</div>
+        <div class="button button%">%</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
